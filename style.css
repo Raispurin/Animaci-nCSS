@@ -1,0 +1,142 @@
+@keyframes zoomies {
+    0%   {transform: rotate(0deg); left:0px; top:0px;}
+    10%  {transform: rotate(36deg); left:-300px; top:0px;}
+    20%  {transform: rotate(72deg); left:-300px; top:200px;}
+    30%  {transform: rotate(108deg); left:800px; top:200px;}
+    40%  {transform: rotate(144deg); left:800px; top:-200px;}
+    50%  {transform: rotate(180deg); left:-300px; top:-200px;}
+    60%  {transform: rotate(216deg); left:800px; top:200px;}
+    70%  {transform: rotate(252deg); left:300px; top:-200px;}
+    80%  {transform: rotate(288deg); left:0px; top:0px;}
+    90%  {transform: rotate(324deg); left:600px; top:0px;}
+    100% {transform: rotate(360deg); left:0px; top:0px;}
+  }
+
+@keyframes rodear {
+    0%   {transform: scaleX(1); left:0px; top:40px;}
+    20%  {transform: scaleX(1); left:750px; top:40px;}
+    30%  {transform: scaleX(-1); left:750px; top:40px;}
+    50%  {transform: scaleX(-1); left:-600px; top:40px;}
+    80%  {transform: scaleX(1); left:-600px; top:40px;}
+    100%  {transform: scaleX(1); left:0px; top:40px;}
+}
+
+@keyframes snore {
+    from {width: 200px;}
+    to {width: 210px;}
+}
+
+@keyframes relleno {
+    from {fill:#F9B233;}
+    to {fill: rgb(43, 255, 0);}
+}
+
+body{
+    text-align: center;
+    margin-top: 0px;
+    background-color: sandybrown;
+
+}
+
+.container{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#GatoNaranja{
+    width: 200px;
+    fill: black;
+    position: relative;
+    animation-name: zoomies;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+#GatoNaranja .st0 {
+    fill: #EB790D;
+}
+#GatoNaranja .st1 {
+    fill: #E72866;
+}
+#GatoNaranja .st2 {
+    fill: white;
+}
+
+#GatoJuguete{
+    width: 100px;
+    fill: black;
+    position: relative;
+    animation-name: rodear;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+#GatoJuguete .st0 {
+    fill: #1D71B8;
+}
+#GatoJuguete .st1 {
+    fill: #00A19A;
+}
+#GatoJuguete .st2 {
+    fill: #E6577D;
+}
+#GatoJuguete .st3 {
+    fill: #E6577D;
+}
+#GatoJuguete .st4 {
+    fill: #662483;
+}
+
+#GatoBlanco{
+    width: 200px;
+    fill: black;
+    transition: width 0.5s ease-in-out;
+    animation-name: snore;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+#GatoBlanco .st0 {
+    fill: #F9DEB1;
+}
+#GatoBlanco:hover{
+    width: 230px;
+}
+
+#GatoGris{
+    width: 130px;
+    fill: black;
+    transform: translateY(25px);
+    transition: width 0.2s ease-in-out; 
+    transition: transform 0.2s ease-in-out;
+}
+#GatoGris .st0 {
+    fill: #3C3C3B;
+}
+#GatoGris .st1 {
+    fill: #F9B233;
+    animation-name: relleno;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-delay: .5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+#GatoGris .st2 {
+    fill: #F9B233;
+    animation-name: relleno;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-delay: .5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+#GatoGris .st3 {
+    fill: #3C3C3B;
+}
+#GatoGris:hover{
+    transform: translateY(-80px); 
+    width: 150px;
+}
